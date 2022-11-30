@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <title>Task Form</title>
 </head>
+
 <body>
+
+    <div class="container">
+        <div class="col-sm-6" style="border: 1px solid gray;">
+        <h2>Task Form</h2>
+        <form id="taskform">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="tasktitle" placeholder="Enter email" name="email">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Task Description</label>
+                <textarea class="form-control" id="tdesc" rows="3"></textarea>
+              </div>
+            <div class="form-group">
+              <select id = "tassignee" class="form-control">
+                <option>Select Task Assignee</option>
+                <option>John</option>
+                <option>Mira</option>
+              </select>
+            </div>
+            <div class="form-group"> 
+                <label class="control-label" for="date">Due Date</label>
+                <input class="form-control" id="tdate" name="date" placeholder="MM/DD/YYY" type="text"/>
+              </div>
+
+              <div class="form-group">
+                <select id = "tstatus" class="form-control">
+                  <option>Select Task Status</option>
+                  <option>Started</option>
+                  <option>Completed</option>
+                </select>
+              </div>
+  
+        
+              
+         
+          <button type="button" id="save_btn" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm-6" style="border: 1px solid gray;">
+        <h2 style="text-align: center;">Task Details</h2>
+        <div class="row">
+          <div class="col-sm-2" style="background-color: #ffdc5c;padding: 10px;">Task Name</div>
+          <div class="col-sm-3" style="background-color: #38b7ff;padding: 10px;">Task Description</div>
+          <div class="col-sm-3" style="background-color: #ff914d;padding: 10px;">Task Assigned</div>
+          <div class="col-sm-2" style="background-color: #ff914d;padding: 10px;">Due Date</div>
+          <div class="col-sm-2" style="background-color: #ff914d;padding: 10px;">Task Status</div>
+
+
+
+        </div>
+        <div id="showTasks"></div>
+      </div>
+      </div>
+   
+
+
+
+
+
+    
     <script src="./userClass.js"></script>
 </body>
 </html>
