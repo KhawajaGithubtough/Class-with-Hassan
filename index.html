@@ -15,13 +15,16 @@
 
 <body>
 
-    <div class="container">
-        <div class="col-sm-6" style="border: 1px solid gray;">
-        <h2>Task Form</h2>
+    <div class="container mt-4">
+
+      <h1 class="display-4 text-center">
+        
+        <i class="fas fa-book-open text-primary"></i> Task<span class="text-primary">Form</span>Detail</h1>
+
         <form id="taskform">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="tasktitle" placeholder="Enter email" name="email">
+                <input type="text" class="form-control" id="tasktitle" placeholder="Enter Task Titlle" name="email">
               </div>
 
               <div class="form-group">
@@ -51,24 +54,41 @@
         
               
          
-          <button type="button" id="save_btn" class="btn btn-default">Submit</button>
+          <button type="submit" id="save_btn" class="btn btn-primary btn-block">Submit</button>
         </form>
-      </div>
-      <div class="col-sm-6" style="border: 1px solid gray;">
-        <h2 style="text-align: center;">Task Details</h2>
-        <div class="row">
-          <div class="col-sm-2" style="background-color: #ffdc5c;padding: 10px;">Task Name</div>
-          <div class="col-sm-3" style="background-color: #38b7ff;padding: 10px;">Task Description</div>
-          <div class="col-sm-3" style="background-color: #ff914d;padding: 10px;">Task Assigned</div>
-          <div class="col-sm-2" style="background-color: #ff914d;padding: 10px;">Due Date</div>
-          <div class="col-sm-2" style="background-color: #ff914d;padding: 10px;">Task Status</div>
+      
+      
+        <div id="showTasks">
+
+          <table class="table table-striped mt-5">
+
+            <thead>
+
+            <tr>
+              <th>Task Title </th>
+              <th>Task Description </th>
+              <th>Task Due Date </th>
+              <th>Task Assigned To </th>
+              <th>Task Status </th>
+            </tr>
+
+            </thead>
+
+            <!--Going to insert tasks here-->
+
+            <tbody id="task-list"></tbody>
+
+
+
+
+          </table>
+
 
 
 
         </div>
-        <div id="showTasks"></div>
-      </div>
-      </div>
+      
+    </div>
    
 
 
